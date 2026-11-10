@@ -1,4 +1,5 @@
 import { roles } from '../data/profile'
+import DocumentLinks from './DocumentLinks'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
@@ -37,6 +38,7 @@ const Experience = () => (
             </ul>
             {role.chief ? <p className="mt-3 text-sm text-mist">Jefe inmediato: {role.chief}</p> : null}
             <p className="copy mt-4 text-sm leading-relaxed text-mist">{role.summary}</p>
+            <DocumentLinks documents={role.documents} />
             </article>
           </Reveal>
         </li>

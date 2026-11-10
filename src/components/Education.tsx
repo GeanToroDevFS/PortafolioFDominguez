@@ -1,4 +1,4 @@
-import { complementary, formalStudies, records } from '../data/profile'
+import { complementary, formalStudies } from '../data/profile'
 import DocumentLinks from './DocumentLinks'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
@@ -49,25 +49,6 @@ const Education = () => (
         </li>
       ))}
     </ul>
-
-    <div className="mt-14">
-      <Reveal>
-        <h3 className="text-3xl text-ivory">Antecedentes</h3>
-        <p className="copy mt-3 text-sm text-mist">
-          Constancias que acompañan la hoja de vida. Cada una corresponde a la fecha de expedición indicada.
-        </p>
-      </Reveal>
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
-        {records.map((record) => (
-          <Reveal key={record.body}>
-            <article className="panel h-full p-6">
-              <h4 className="text-2xl text-gold">{record.body}</h4>
-              <p className="copy mt-3 text-sm leading-relaxed text-mist">{record.detail}</p>
-            </article>
-          </Reveal>
-        ))}
-      </div>
-    </div>
   </section>
 )
 

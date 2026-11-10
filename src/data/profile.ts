@@ -69,6 +69,13 @@ export const areas = [
 
 export type Period = { from: string; to: string }
 
+export type SupportingDocument = {
+  label: string
+  src: string
+  alt: string
+  pages?: string[]
+}
+
 export type Role = {
   org: string
   unit: string
@@ -77,6 +84,7 @@ export type Role = {
   periods: Period[]
   chief?: string
   summary: string
+  documents?: SupportingDocument[]
 }
 
 export const roles: Role[] = [
@@ -89,6 +97,14 @@ export const roles: Role[] = [
     chief: 'Carlos Andrés Murgueitio, Secretario de Gobierno',
     summary:
       'Profesional al servicio de la Administración Central del Municipio de Yumbo. La certificación de la Alcaldía describe funciones de convivencia ciudadana, conocimiento de comportamientos contrarios a la convivencia, investigaciones, medidas correctivas, querellas policivas y coordinación con la Policía Nacional y la Secretaría de Seguridad y Convivencia.',
+    documents: [
+      {
+        label: 'Ver constancia',
+        src: '/certificados/constancia-inspector-1.jpg',
+        alt: 'Certificación laboral de Inspector de Policía Urbana, Alcaldía de Yumbo',
+        pages: ['/certificados/constancia-inspector-1.jpg', '/certificados/constancia-inspector-2.jpg'],
+      },
+    ],
   },
   {
     org: 'Secretaría de Tránsito y Transporte',
@@ -101,6 +117,14 @@ export const roles: Role[] = [
     ],
     summary:
       'Apoyo jurídico a la Secretaría de Tránsito y Transporte del municipio de Yumbo, en dos vigencias contractuales.',
+    documents: [
+      {
+        label: 'Ver constancia',
+        src: '/certificados/constancia-transito-1.jpg',
+        alt: 'Certificación de contratos en la Secretaría de Tránsito y Transporte de Yumbo, vigencias 2021 y 2022',
+        pages: ['/certificados/constancia-transito-1.jpg', '/certificados/constancia-transito-2.jpg'],
+      },
+    ],
   },
   {
     org: 'Secretaría Jurídica',
@@ -113,6 +137,18 @@ export const roles: Role[] = [
     ],
     summary:
       'Ejercicio profesional como abogado contratista de la Secretaría Jurídica del municipio de Yumbo, en las vigencias 2020 y 2021.',
+    documents: [
+      {
+        label: 'Ver constancia',
+        src: '/certificados/constancia-juridica-1.jpg',
+        alt: 'Certificación de contratos en la Secretaría Jurídica de Yumbo, vigencias 2020 y 2021',
+        pages: [
+          '/certificados/constancia-juridica-1.jpg',
+          '/certificados/constancia-juridica-2.jpg',
+          '/certificados/constancia-juridica-3.jpg',
+        ],
+      },
+    ],
   },
   {
     org: 'Secretaría de Paz y Convivencia',
@@ -125,14 +161,15 @@ export const roles: Role[] = [
     ],
     summary:
       'Apoyo técnico a la gestión de la Secretaría de Paz y Convivencia del municipio de Yumbo, en las vigencias 2018 y 2019.',
+    documents: [
+      {
+        label: 'Ver constancia',
+        src: '/certificados/constancia-paz.jpg',
+        alt: 'Certificación de contratos en la Secretaría de Paz y Convivencia de Yumbo, vigencias 2018 y 2019',
+      },
+    ],
   },
 ]
-
-export type SupportingDocument = {
-  label: string
-  src: string
-  alt: string
-}
 
 export const formalStudies: Array<{
   level: string
@@ -241,18 +278,5 @@ export const complementary: Array<{
         alt: 'Certificado del Seminario en Derechos Humanos de la Universidad de Manizales',
       },
     ],
-  },
-]
-
-export const records = [
-  {
-    body: 'Comisión Nacional de Disciplina Judicial',
-    detail:
-      'Certificado de sanciones vigentes para abogados del 10 de julio de 2026: no registra sanciones vigentes. Tarjeta profesional No. 338009.',
-  },
-  {
-    body: 'Policía Nacional de Colombia',
-    detail:
-      'Consulta de medidas correctivas del 10 de julio de 2026: no tiene medidas correctivas pendientes por cumplir, conforme a la Ley 1801 de 2016.',
   },
 ]

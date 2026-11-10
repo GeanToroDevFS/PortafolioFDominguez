@@ -53,13 +53,17 @@ const DocumentLinks = ({ documents }: Props) => {
                 className="max-h-[92vh] w-full max-w-3xl overflow-auto bg-ivory p-3"
                 onClick={(event) => event.stopPropagation()}
               >
-                <div className="mb-3 flex items-center justify-between gap-4">
+                <div className="sticky top-0 z-10 mb-3 flex items-center justify-between gap-4 bg-ivory py-1">
                   <p className="text-sm font-medium text-ink">{open.label}</p>
                   <button type="button" className="text-sm text-ink underline underline-offset-4" onClick={() => setOpen(null)}>
                     Cerrar
                   </button>
                 </div>
-                <img src={open.src} alt={open.alt} className="w-full" />
+                <div className="space-y-3">
+                  {(open.pages ?? [open.src]).map((src, index) => (
+                    <img key={src} src={src} alt={`${open.alt}. Hoja ${index + 1}`} className="w-full" />
+                  ))}
+                </div>
               </div>
             </div>,
             document.body,
