@@ -7,7 +7,6 @@
   --color-seal: #8e3b3b;
   --color-mist: #c8c1b4;
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Cormorant Garamond", "Palatino Linotype", Palatino, serif;
 }
 
 html {
@@ -35,6 +34,21 @@ body {
 
 section {
   scroll-margin-top: 5.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+.copy {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  hyphens: none;
+  text-wrap: pretty;
 }
 
 .skip-link {

@@ -61,7 +61,7 @@ const LegalBackdrop = () => (
         textAnchor="middle"
         fill="currentColor"
         fontSize="42"
-        fontFamily="Cormorant Garamond, serif"
+        fontFamily="Outfit, sans-serif"
       >
         FD
       </text>

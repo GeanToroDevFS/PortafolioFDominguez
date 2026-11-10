@@ -22,7 +22,7 @@ const Experience = () => (
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <p className="text-xs tracking-[0.2em] text-gold uppercase">{role.kind}</p>
             </div>
-            <h3 className="mt-2 font-serif text-3xl text-ivory">{role.title}</h3>
+            <h3 className="mt-2 text-3xl text-ivory">{role.title}</h3>
             <p className="mt-1 text-mist">
               {role.org}
               <span className="text-gold"> · </span>
@@ -36,7 +36,7 @@ const Experience = () => (
               ))}
             </ul>
             {role.chief ? <p className="mt-3 text-sm text-mist">Jefe inmediato: {role.chief}</p> : null}
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-mist">{role.summary}</p>
+            <p className="copy mt-4 text-sm leading-relaxed text-mist">{role.summary}</p>
             </article>
           </Reveal>
         </li>

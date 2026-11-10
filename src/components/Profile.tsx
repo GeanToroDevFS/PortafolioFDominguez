@@ -13,11 +13,11 @@ const Profile = () => (
           title="Ejercicio jurídico con criterio y ética"
         />
       </Reveal>
-      <div className="grid gap-8 lg:grid-cols-[1.4fr_0.8fr]">
+      <div className="grid gap-8 lg:grid-cols-[1fr_16rem]">
         <Reveal>
           <div className="panel space-y-5 p-7 md:p-9">
             {profile.paragraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 24)} className="font-serif text-xl leading-relaxed text-ivory md:text-2xl">
+              <p key={paragraph.slice(0, 24)} className="copy text-base leading-7 text-ivory">
                 {paragraph}
               </p>
             ))}
@@ -28,7 +28,7 @@ const Profile = () => (
             <p className="text-xs tracking-[0.24em] text-gold uppercase">Fuentes del derecho</p>
             <ul className="mt-5 space-y-3">
               {sources.map((source) => (
-                <li key={source} className="border-b border-gold/20 pb-3 font-serif text-2xl text-ivory">
+                <li key={source} className="border-b border-gold/20 pb-3 text-lg text-ivory">
                   {source}
                 </li>
               ))}
@@ -61,8 +61,8 @@ const Profile = () => (
         {areas.map((area, index) => (
           <Reveal key={area.title} delay={index * 0.04}>
             <article className="panel h-full p-6">
-              <h3 className="font-serif text-2xl text-gold">{area.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-mist">{area.detail}</p>
+              <h3 className="text-2xl text-gold">{area.title}</h3>
+              <p className="copy mt-3 text-sm leading-6 text-mist">{area.detail}</p>
             </article>
           </Reveal>
         ))}

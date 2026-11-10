@@ -19,7 +19,7 @@ const Education = () => (
           <article className="panel grid gap-3 p-6 md:grid-cols-[9rem_1fr_auto] md:items-center md:p-7">
             <p className="text-xs tracking-[0.2em] text-gold uppercase">{study.level}</p>
             <div>
-              <h3 className="font-serif text-3xl text-ivory">{study.title}</h3>
+              <h3 className="text-3xl text-ivory">{study.title}</h3>
               <p className="mt-1 text-mist">
                 {study.school} · {study.place}
               </p>
@@ -31,7 +31,7 @@ const Education = () => (
     </div>
 
     <Reveal>
-      <h3 className="mt-14 font-serif text-3xl text-ivory">Otros estudios</h3>
+      <h3 className="mt-14 text-3xl text-ivory">Otros estudios</h3>
     </Reveal>
     <ul className="mt-6 divide-y divide-gold/20 border-y border-gold/20">
       {complementary.map((item) => (
@@ -49,8 +49,8 @@ const Education = () => (
 
     <div className="mt-14">
       <Reveal>
-        <h3 className="font-serif text-3xl text-ivory">Antecedentes</h3>
-        <p className="mt-3 max-w-2xl text-sm text-mist">
+        <h3 className="text-3xl text-ivory">Antecedentes</h3>
+        <p className="copy mt-3 text-sm text-mist">
           Constancias que acompañan la hoja de vida. Cada una corresponde a la fecha de expedición indicada.
         </p>
       </Reveal>
@@ -58,8 +58,8 @@ const Education = () => (
         {records.map((record) => (
           <Reveal key={record.body}>
             <article className="panel h-full p-6">
-              <h4 className="font-serif text-2xl text-gold">{record.body}</h4>
-              <p className="mt-3 text-sm leading-relaxed text-mist">{record.detail}</p>
+              <h4 className="text-2xl text-gold">{record.body}</h4>
+              <p className="copy mt-3 text-sm leading-relaxed text-mist">{record.detail}</p>
             </article>
           </Reveal>
         ))}

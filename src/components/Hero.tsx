@@ -17,9 +17,9 @@ const Hero = () => {
           <p className="mb-5 text-xs tracking-[0.32em] text-gold uppercase">
             {profile.role} · {profile.location}
           </p>
-          <h1 className="font-serif text-5xl leading-[0.92] text-ivory sm:text-6xl lg:text-7xl">
+          <h1 className="text-5xl leading-[0.95] font-medium text-ivory sm:text-6xl lg:text-7xl">
             <span className="block">{profile.given}</span>
-            <span className="block italic text-gold">{profile.family}</span>
+            <span className="block text-gold">{profile.family}</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-mist">{profile.specialty}</p>
           <p className="mt-3 text-sm tracking-wide text-ivory/80">
@@ -49,23 +49,18 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <motion.figure
-          className="mx-auto w-full max-w-sm"
+        <motion.div
+          className="mx-auto w-full max-w-sm bg-ivory p-3 shadow-[0_24px_70px_rgba(0,0,0,0.35)]"
           initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.12, ease }}
         >
-          <div className="bg-ivory p-3 shadow-[0_24px_70px_rgba(0,0,0,0.35)]">
-            <img
-              src="/retrato.jpg"
-              alt="Retrato de Felipe Armando Domínguez Muñoz"
-              className="aspect-[4/5] w-full object-cover object-top"
-            />
-            <figcaption className="px-2 py-3 text-center font-serif text-xl text-ink">
-              F. A. Domínguez Muñoz
-            </figcaption>
-          </div>
-        </motion.figure>
+          <img
+            src="/retrato.jpg"
+            alt="Retrato de Felipe Armando Domínguez Muñoz"
+            className="aspect-[4/5] w-full object-cover object-top"
+          />
+        </motion.div>
       </div>
     </section>
   )

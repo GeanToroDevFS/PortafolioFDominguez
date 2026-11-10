@@ -24,7 +24,7 @@ const Contact = () => (
     <div className="grid gap-4 md:grid-cols-3">
       <Reveal>
         <article className="panel h-full p-6">
-          <h3 className="font-serif text-2xl text-gold">Correo</h3>
+          <h3 className="text-2xl text-gold">Correo</h3>
           <ul className="mt-4 space-y-3">
             {profile.emails.map((email) => (
               <li key={email}>
@@ -38,7 +38,7 @@ const Contact = () => (
       </Reveal>
       <Reveal delay={0.05}>
         <article className="panel h-full p-6">
-          <h3 className="font-serif text-2xl text-gold">Teléfono</h3>
+          <h3 className="text-2xl text-gold">Teléfono</h3>
           <a className="mt-4 block text-lg text-ivory hover:text-gold" href={profile.phoneHref}>
             {profile.phoneDisplay}
           </a>
@@ -54,7 +54,7 @@ const Contact = () => (
       </Reveal>
       <Reveal delay={0.1}>
         <article className="panel h-full p-6">
-          <h3 className="font-serif text-2xl text-gold">Dirección</h3>
+          <h3 className="text-2xl text-gold">Dirección</h3>
           <p className="mt-4 text-ivory">{profile.address}</p>
           <p className="text-mist">{profile.city}</p>
           <a

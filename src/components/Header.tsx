@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { profile } from '../data/profile'
 
 const links = [
   { href: '#perfil', label: 'Perfil' },
@@ -54,14 +53,9 @@ const Header = () => {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#contenido" className="flex items-center gap-3 text-ivory">
-          <span className="grid h-10 w-10 place-items-center rounded-full border border-gold/70 font-serif text-sm text-gold">
-            FD
-          </span>
-          <span className="leading-tight">
-            <span className="block font-serif text-lg">Domínguez Muñoz</span>
-            <span className="block text-[11px] tracking-[0.22em] uppercase text-gold">Abogado</span>
-          </span>
+        <a href="#contenido" className="leading-tight text-ivory">
+          <span className="block text-lg font-medium">Felipe Domínguez</span>
+          <span className="block text-[11px] tracking-[0.22em] uppercase text-gold">Abogado</span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Secciones">
@@ -76,13 +70,6 @@ const Header = () => {
             </a>
           ))}
         </nav>
-
-        <a
-          href={profile.phoneHref}
-          className="hidden text-sm text-gold md:inline"
-        >
-          {profile.phoneDisplay}
-        </a>
 
         <button
           type="button"
@@ -117,11 +104,6 @@ const Header = () => {
                 </a>
               </li>
             ))}
-            <li>
-              <a href={profile.phoneHref} className="block py-1 text-gold">
-                {profile.phoneDisplay}
-              </a>
-            </li>
           </ul>
         </nav>
       ) : null}
