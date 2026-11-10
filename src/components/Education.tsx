@@ -1,4 +1,5 @@
 import { complementary, formalStudies, records } from '../data/profile'
+import DocumentLinks from './DocumentLinks'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
@@ -23,6 +24,7 @@ const Education = () => (
               <p className="mt-1 text-mist">
                 {study.school} · {study.place}
               </p>
+              <DocumentLinks documents={study.documents} />
             </div>
             <p className="text-sm text-ivory">{study.date}</p>
           </article>
@@ -39,6 +41,7 @@ const Education = () => (
           <div>
             <p className="text-ivory">{item.title}</p>
             <p className="mt-1 text-sm text-mist">{item.school}</p>
+            <DocumentLinks documents={item.documents} />
           </div>
           <p className="text-sm text-gold">
             {item.hours} · {item.date}

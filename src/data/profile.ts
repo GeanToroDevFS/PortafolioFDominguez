@@ -128,13 +128,47 @@ export const roles: Role[] = [
   },
 ]
 
-export const formalStudies = [
+export type SupportingDocument = {
+  label: string
+  src: string
+  alt: string
+}
+
+export const formalStudies: Array<{
+  level: string
+  title: string
+  school: string
+  place: string
+  date: string
+  documents?: SupportingDocument[]
+}> = [
+  {
+    level: 'Maestría en curso',
+    title: 'Gobierno y Políticas Públicas',
+    school: 'Universidad Icesi',
+    place: 'Cali, Valle del Cauca',
+    date: 'Primer semestre de 2026',
+    documents: [
+      {
+        label: 'Ver constancia',
+        src: '/certificados/constancia-icesi.jpg',
+        alt: 'Constancia de estudio de la Maestría en Gobierno y Políticas Públicas, Universidad Icesi',
+      },
+    ],
+  },
   {
     level: 'Especialización',
     title: 'Educación en Derechos Humanos',
     school: 'Universidad Unicatólica',
     place: 'Cali, Valle del Cauca',
     date: '2 de diciembre de 2022',
+    documents: [
+      {
+        label: 'Ver título',
+        src: '/certificados/acta-unicatolica.jpg',
+        alt: 'Acta de graduación de Especialista en Educación en Derechos Humanos, Universidad Unicatólica',
+      },
+    ],
   },
   {
     level: 'Universitario',
@@ -142,6 +176,18 @@ export const formalStudies = [
     school: 'Universidad Libre',
     place: 'Cali, Valle del Cauca',
     date: '26 de noviembre de 2019',
+    documents: [
+      {
+        label: 'Ver título',
+        src: '/certificados/acta-universidad-libre.jpg',
+        alt: 'Acta de grado de abogado de la Universidad Libre, seccional Cali',
+      },
+      {
+        label: 'Ver tarjeta profesional',
+        src: '/certificados/tarjeta-profesional.jpg',
+        alt: 'Tarjeta profesional de abogado número 338009',
+      },
+    ],
   },
   {
     level: 'Bachillerato técnico',
@@ -152,7 +198,13 @@ export const formalStudies = [
   },
 ]
 
-export const complementary = [
+export const complementary: Array<{
+  title: string
+  school: string
+  hours: string
+  date: string
+  documents?: SupportingDocument[]
+}> = [
   {
     title: 'Formulación de proyectos de innovación en la gestión pública',
     school: 'Universidad Autónoma de Occidente',
@@ -182,6 +234,13 @@ export const complementary = [
     school: 'Universidad de Manizales',
     hours: '40 horas',
     date: '5 de agosto de 2022',
+    documents: [
+      {
+        label: 'Ver certificado',
+        src: '/certificados/seminario-manizales.jpg',
+        alt: 'Certificado del Seminario en Derechos Humanos de la Universidad de Manizales',
+      },
+    ],
   },
 ]
 

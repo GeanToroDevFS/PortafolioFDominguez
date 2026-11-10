@@ -44,7 +44,7 @@ const Header = () => {
   }, [])
 
   const linkClass = (href: string, idle: string) =>
-    `text-sm transition-colors duration-300 ${active === href.slice(1) ? 'text-gold' : idle}`
+    `text-base font-medium transition-colors duration-300 ${active === href.slice(1) ? 'text-gold' : idle}`
 
   return (
     <header
@@ -54,8 +54,8 @@ const Header = () => {
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a href="#contenido" className="leading-tight text-ivory">
-          <span className="block text-lg font-medium">Felipe Domínguez</span>
-          <span className="block text-[11px] tracking-[0.22em] uppercase text-gold">Abogado</span>
+          <span className="block text-xl font-medium md:text-2xl">Felipe Domínguez</span>
+          <span className="block text-sm tracking-[0.22em] uppercase text-gold">Abogado</span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Secciones">
@@ -95,7 +95,7 @@ const Header = () => {
                 <a
                   href={link.href}
                   aria-current={active === link.href.slice(1) ? 'true' : undefined}
-                  className={`block py-1 transition-colors duration-300 ${
+                  className={`block py-1 text-base font-medium transition-colors duration-300 ${
                     active === link.href.slice(1) ? 'text-gold' : 'text-ivory'
                   }`}
                   onClick={() => setOpen(false)}
